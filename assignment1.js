@@ -218,9 +218,10 @@ var transactions = [
     - This array is allowed to contain duplicate values.
      
   */
-  var uniqueVendors = [];
-  transactions.forEach(transaction => {if(transaction.vendor) uniqueVendors.push(transaction.vendor)});
-  console.log(uniqueVendors);
+//   var uniqueVendors = [];
+//   transactions.forEach(transaction => {if(transaction.vendor) uniqueVendors.push(transaction.vendor)});
+var uniqueVendors = transactions.filter(transaction => transaction.vendor).map(transaction => transaction.vendor);  
+console.log(uniqueVendors);
 
   
   // --------------------------------------------------
