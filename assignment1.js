@@ -353,7 +353,10 @@ console.log(uniqueCustomers);
     HINTS:
     - The result of this calculation should be a number (not an array, object, or other data type).
   */
-  var mostItems;
+  var mostItems = transactions.filter(transaction => transaction.type==='sale').reduce((prev,curr) =>
+  {return (prev.items.length > curr.items.length ? prev : curr)}).items.length;
+
+  console.log("The most items sold as part of a single transaction is: ", mostItems);
   
 
 
@@ -363,7 +366,10 @@ console.log(uniqueCustomers);
   /*
     Calculate the sum of the 'purchase' with the fewest items.
   */
-  var sumOfSmallestPurchase;
+  var sumOfSmallestPurchase = transactions.filter(transaction => transaction.type==='purchase').reduce((prev, curr) =>
+  {return (prev.items.length < curr.items.length ? prev : curr)}).items.reduce((a,b)=> a.price+b.price);
+ 
+  console.log(`The sum of the purchase with the fewest items is $${(-sumOfSmallestPurchase).toFixed(2)}`);
 
   
  
