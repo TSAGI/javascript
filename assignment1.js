@@ -240,8 +240,9 @@ console.log(uniqueVendors);
 //   var uniqueCustomers = [];
 //   transactions.forEach(transaction => {if(transaction.customer) uniqueCustomers.push(transaction.customer)});
 //   uniqueCustomers = Array.from(new Set(uniqueCustomers));
-var uniqueCustomers = transactions.filter(transaction => transaction.customer).map(transaction => transaction.customer);
-  uniqueCustomers = Array.from(new Set(uniqueCustomers));
+var uniqueCustomers = transactions.filter(transaction => transaction.customer).map(transaction => 
+    transaction.customer).filter((element, index, array) => array.indexOf(element) == index);
+//   uniqueCustomers = Array.from(new Set(uniqueCustomers));
 console.log(uniqueCustomers);
   
 
