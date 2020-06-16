@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./my.js"></script>
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <section>
+        <img
+            style="width: 20%;"
+            src="./logo.jpg"
+            alt="Jurassic Park logo"
+        />
+        <p>
+            Here we will add a link to the 
+            <a id="logo" href="https://www.mozilla.org">Mozilla homepage</a>
+        </p>
+    </section>
+
+    <input type="text" placeholder="please enter name" onchange="onInputChange(event)" />
+    <button onclick="onBtnClick()">Submit</button>
+
+    <div id="namelist">
+
+    </div>
+    
+</body>
+</html>
