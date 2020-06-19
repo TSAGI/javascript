@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./my.js"></script>
+    <link rel="stylesheet" href="./my.css">
     <title>DOM manipulation</title>
 </head>
 <body>
@@ -21,10 +22,11 @@
 
     <input type="text" placeholder="please enter name" onchange="onInputChange(event)" />
     <button onclick="onBtnClick()">Submit</button>
-
+    <p id="error"></p>
     <div id="namelist">
 
     </div>
+    <button id="loadButton" onclick="loadData()">Load Data to DOM</button>
     
 </body>
 </html>
