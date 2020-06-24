@@ -1,0 +1,61 @@
+h1 {
+    color: darkslategrey;
+    text-align: center;
+    width: 88%;
+    text-decoration: underline;
+}
+
+#dataList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+.dataElement {
+    border: 1px solid silver;
+    width: 40%;
+    height: 100%;
+    margin: 20px;
+    background-color: bisque;
+}
+
+.name, .email, .street, .suite, .city, .zipcode {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.name, .email, .street {
+    margin-top: 10px;
+    /* font-style: italic; */
+}
+
+.attr {
+    margin-right: -20%;
+    float: left;
+    font-weight: bold;
+    /* margin-top: 10px; */
+}
+
+/* .price {
+    text-align: right;
+    float: left;
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.name {
+    padding-left: 10px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+} */
+
+#deleteButton {
+    color: red;
+    width: 40%;
+    margin: 10px 30% 10px 30%;
+}
