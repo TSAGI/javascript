@@ -18,15 +18,3 @@ let cart=[
     {"name":"SmartWatch", "type":"regular", "category":"tech", "price": 60},
     {"name":"keurig", "type":"prime", "category":"tech", "price": 10.50},
   ]
-
-  // module.exports = cart;
-  export default cart;
-  // Questions
-  // Print No: of prime items
-  // Lits the name of all prime items
-  // Lits the name of all non-prime items
-  // Apply 20% discount to all tech items and print the cart
-  // Find total cost of all prime items
-  // Find total cost of all regular items
-  // divide the cart into 2 (Prime cart and regular cart) and print
-  // List all the food item.
