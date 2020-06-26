@@ -1,0 +1,54 @@
+h1 {
+    color: darkslategrey;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#dataList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    padding: 0 20px;
+    width: 100%;
+    margin-left: auto;
+}
+
+.dataElement {
+    border: 1px solid silver;
+    width: 25%;
+    height: 100%;
+    margin: 20px;
+    background-color: bisque;
+}
+
+.name, .tallyElement {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.name, .tallyElement {
+    margin-top: 10px;
+}
+
+#voteButton  {
+    color: rgb(10, 101, 134);
+    width: 20%;
+    margin: 10px 30% 10px 40%;
+}
+
+#result {
+    text-align: center;
+    width: 300px;
+}
+
+#resultButton {
+    color: rgb(19, 177, 85);
+    font-weight: bold;
+    bottom: 9%;
+    position: absolute;
+}
+
+p {
+    margin: 10% -20% 0 20%;
+}
