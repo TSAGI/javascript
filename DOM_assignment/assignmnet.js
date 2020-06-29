@@ -4,7 +4,16 @@
 // Info should be displayed on loading the html page
 // add delete button to each user to delete the respective user from html
 document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then((e) => e.json())
+    .then((response) => {
+        processData(response);
+    })
+});
+
+processData = (data) => {
     let mainDiv = document.querySelector('#dataList');
+    
     data.forEach((element, elementID) => {
         let dataDiv = document.createElement('div');
         dataDiv.setAttribute('id', `elem${elementID}`);
@@ -21,10 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
         remove.id = 'deleteButton';
         dataDiv.appendChild(remove);
             
-        mainDiv.appendChild(dataDiv); 
-
+        mainDiv.appendChild(dataDiv);
     });
-});
+}
 
 deleteItem = (event) => {
     console.log(event.target.parentNode.id);

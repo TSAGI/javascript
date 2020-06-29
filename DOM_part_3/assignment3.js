@@ -6,6 +6,14 @@
 // At any point of time clicking the Result button should display a label saying who is the winner with maximum votes
 var contestants = [];
 document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then((e) => e.json())
+    .then((response) => {
+        processData(response);
+    });
+});
+
+processData = (data) => {
     let mainDiv = document.querySelector('#dataList');
     data.forEach((element) => {
         var counter = 0;
@@ -44,6 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     result.appendChild(resultButton);
     mainDiv.appendChild(result);
 
-});
+}
 
 
