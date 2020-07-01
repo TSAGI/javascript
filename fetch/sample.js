@@ -1,18 +1,38 @@
-var posts;
-
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((e) => e.json())
-    .then((posts) => {
-        processPosts(posts);
-    })
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(e => e.json())
+    .then(names => {
+        processNames(names);
+    });
 });
 
-processPosts = (posts) => {
-var postDiv = document.querySelector('#postList');
-posts.filter(element => element.userId===3).forEach(post => {
-    let dataDiv = document.createElement('div');
-    dataDiv.innerHTML = post.title;
-    postDiv.appendChild(dataDiv);
-    });
-};
+processNames = (names) => {
+    let nameDiv = document.querySelector('#nameList');
+    
+    names.forEach((element, elementID) => {
+        let dataDiv = document.createElement('div');
+        dataDiv.setAttribute('id', `elem${elementID}`);
+        dataDiv.classList = 'nameElement';
+        dataDiv.innerHTML = "<div class='name'> " + element.name + "</div>";
+        nameDiv.appendChild(dataDiv);
+
+        dataDiv.addEventListener('click', getPosts = () => {
+            fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(e => e.json())
+            .then(posts => {  
+            let postDiv = document.querySelector('#postList');
+            postDiv.innerHTML = "";
+            posts.forEach(post => {
+                if(post.userId===element.id){
+                let newDiv = document.createElement('div');
+                newDiv.classList = 'postElement';
+                newDiv.innerHTML = "<div class='title'> " + post.title + "</div>";
+        
+                postDiv.appendChild(newDiv);
+                }
+            })  
+        })
+        })    
+    })
+}
+console.log('hello');

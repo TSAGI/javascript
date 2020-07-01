@@ -20,23 +20,21 @@ processNames = (names) => {
         dataDiv.addEventListener('click', getPosts = () => {
             fetch('https://jsonplaceholder.typicode.com/posts')
             .then(e => e.json())
-            .then(posts => { processPosts(posts); });
-        
-            processPosts = (posts) => {
-            let postDiv = document.querySelector('#postList');
-            postDiv.innerHTML = "";
-            posts.forEach(post => {
-                if(post.userId===element.id){
-                let newDiv = document.createElement('div');
-                newDiv.classList = 'postElement';
-                newDiv.innerHTML = "<div class='title'> " + post.title + "</div>" + 
-                "<div class='body'> " + post.body + "</div>";
-        
-                postDiv.appendChild(newDiv);
+            .then(posts => { 
+                let postDiv = document.querySelector('#postList');
+                postDiv.innerHTML = "";
+                posts.forEach(post => {
+                    if(post.userId===element.id){
+                    let newDiv = document.createElement('div');
+                    newDiv.classList = 'postElement';
+                    newDiv.innerHTML = "<div class='title'> " + post.title + "</div>" + 
+                    "<div class='body'> " + post.body + "</div>";
+            
+                    postDiv.appendChild(newDiv);
                 }
             })  
-          }
-        })    
-    });
+          })
+        }) 
+    })   
 }
 
