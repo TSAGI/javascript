@@ -17,7 +17,6 @@
     border: 1px solid darkblue;
     background-color: lightblue;
     cursor: pointer;
-    /* height: 12%; */
 }
 
 .nameElement:hover {
@@ -41,7 +40,6 @@
 .postElement {
     border: 1px solid darkgreen;
     background-color: lightgreen;
-    /* height: 12%; */
 }
 
 .title {
@@ -56,5 +54,4 @@
 .body {
     text-align: center;
     margin-bottom: 5px;
-    /* font-size: small; */
 }
