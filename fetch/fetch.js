@@ -9,15 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 processNames = (names) => {
     let nameDiv = document.querySelector('#nameList');
     
-    names.forEach((element, elementID) => {
+    names.forEach((element) => {
         let dataDiv = document.createElement('div');
-        dataDiv.setAttribute('id', `elem${elementID}`);
         dataDiv.classList = 'nameElement';
         dataDiv.innerHTML = "<div class='name'> " + element.name + "</div>" + 
             "<div class='email'> " + element.email + "</div>";
         nameDiv.appendChild(dataDiv);
 
-        dataDiv.addEventListener('click', getPosts = () => {
+        dataDiv.addEventListener('click', () => {
             fetch('https://jsonplaceholder.typicode.com/posts')
             .then(e => e.json())
             .then(posts => { 
