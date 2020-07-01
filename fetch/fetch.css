@@ -1,0 +1,60 @@
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+#nameList {
+    width: 30%;
+}
+
+#postList {
+    width: 70%;
+}
+
+.nameElement {
+    border: 1px solid darkblue;
+    background-color: lightblue;
+    cursor: pointer;
+    /* height: 12%; */
+}
+
+.nameElement:hover {
+    background-color: royalblue;
+}
+
+.name, .email {
+    text-align: center;
+}
+
+.name {
+    margin-top: 5%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.email {
+    margin-bottom: 10px;
+}
+
+.postElement {
+    border: 1px solid darkgreen;
+    background-color: lightgreen;
+    /* height: 12%; */
+}
+
+.title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: rebeccapurple;
+    text-decoration: underline;
+}
+
+.body {
+    text-align: center;
+    margin-bottom: 5px;
+    /* font-size: small; */
+}
