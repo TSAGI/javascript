@@ -28,7 +28,6 @@ processNames = (names) => {
                     newDiv.classList = 'postElement';
                     newDiv.innerHTML = "<div class='title'> " + post.title + "</div>" + 
                     "<div class='body'> " + post.body + "</div>";
-            
                     postDiv.appendChild(newDiv);
                 }
             })  
