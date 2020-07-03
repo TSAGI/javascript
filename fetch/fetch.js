@@ -79,7 +79,7 @@ formDiv.innerHTML = "<form action='' onsubmit='return newPost(" + id + ")'>" +
 "<label for='title'>Title:</label><br>" +
 "<input type='text' id='title' name='title'><br>" +
 "<label for='body'>Body:</label><br>" +
-"<input type='textarea' id='body' name='body'><br><br>" +
+"<input type='text' id='body' name='body'><br><br>" +
 "<input type='submit' id='submit' value='Submit'>" +
 "</form>"
 }
