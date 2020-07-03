@@ -12,22 +12,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
-const postData = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-        title: 'life is good',
-        body: 'hello world',
-        userId: 1
-    }),
-    headers: {
-        "Content-type": "application/json; charset=UTF-8"
-    }
-    })
-    .then(e => e.json())
-    .then(json => console.log(json))
-}
-
 processNames = (names) => {
     let nameDiv = document.querySelector('#nameList');
     let postDiv = document.querySelector('#postList');
@@ -36,13 +20,13 @@ processNames = (names) => {
     add.innerText = 'Add Post';
     add.id = 'addButton';
     nameDiv.appendChild(add);
-
+    
     names.forEach((element) => {
         let dataDiv = document.createElement('div');
         let id = element.id;
         dataDiv.classList = 'nameElement';
         dataDiv.innerHTML = "<div class='name'> " + element.name + "</div>" + 
-            "<div class='email'> " + element.email + "</div>";
+        "<div class='email'> " + element.email + "</div>";
         dataDiv.addEventListener('click', (event) => {
             event.stopPropagation();
             postStuff(id);
@@ -57,6 +41,22 @@ processNames = (names) => {
         dataDiv.appendChild(create);
         nameDiv.appendChild(dataDiv);
     })   
+}
+
+const postData = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+        title: 'life is good',
+        body: 'hello world',
+        userId: 1
+    }),
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+    }
+    })
+    .then(e => e.json())
+    .then(json => console.log(json))
 }
 
 postStuff = (id) => {
