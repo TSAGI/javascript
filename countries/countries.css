@@ -1,0 +1,27 @@
+#container {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+}
+
+.countryElement {
+    border: 1px solid darkblue;
+    background-color: lightblue;
+    width: 32%;
+    margin: 3px;
+    text-align: center;
+    display: inline-block;
+}
+
+img {
+    height: 30px;
+    width: 50px;
+}
+
+#expandButton {
+    float: right;
+}
+
+.name {
+    text-transform: uppercase;
+}
